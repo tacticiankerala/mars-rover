@@ -1,0 +1,10 @@
+require "../mars_rover"
+
+describe MarsRover do
+  it "should initialize with position information" do
+    position = {:x => "3", :y => 5, :orientation => "W"}
+    mars_rover = MarsRover.new position
+    mars_rover.position[:x].should eql position[:x]
+    mars_rover.position[:orientation].should eql position[:orientation]
+  end
+end
